@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    {% load staticfiles %}
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="{% static "insertdata.js" %}"></script>
+
+    <style type="text/css">
+      .grid {
+            width: 1000px;
+            height: 500px;
+            }
+    </style>
+  </head>
+
+  <body>
+    <div ng-controller="insertdata">
+
+      <div class="container">
+        <h2>Data Analysis</h2>
+        <div class="panel panel-default">
+          <div class="panel-heading">Enter File Path</div>
+          <div class="panel-body">
+
+          <div class="row">
+            <div class="col-md-2">
+              <h4>Enter File Path</h4>              
+            </div>
+            <div class="col-md-4">
+              <h4><input type="text" ng-model='name' placeholder=""/></h4>              
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2">
+              <h4>Enter Index</h4>              
+            </div>
+            <div class="col-md-4">
+              <h4><input type="text" ng-model='brand' placeholder=""/></h4>              
+            </div>
+          </div>
+
+          
+          <div class="row">
+          <div class="col-md-1"></div>
+            <div class="col-md-1">
+              <h4><input type="submit" ng-click="submit()" value="Submit"></h4>                  
+            </div>            
+            <div class="col-md-1">         
+              <h4><input type="submit" ng-click="clear()" value="Clear"></h4>             
+            </div>            
+          </div>
+        
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </body>
+</html>
